@@ -1,0 +1,1 @@
+FROM hirocaster/nagios-base

@@ -23,6 +23,6 @@ shift $((OPTIND - 1))
 
 CONTAINER_DIR=$(cd $(dirname $0) && pwd)/containers
 
-docker build ${NO_CACHE} -t nagios-base ${CONTAINER_DIR}/base
-# docker build ${NO_CACHE} -t nagios-manager ${CONTAINER_DIR}/manager
-# docker build ${NO_CACHE} -t nagios-remote ${CONTAINER_DIR}/remote
+docker build ${NO_CACHE} -t hirocaster/nagios-base ${CONTAINER_DIR}/base
+docker build ${NO_CACHE} -t hirocaster/nagios-manager ${CONTAINER_DIR}/manager
+docker build ${NO_CACHE} -t hirocaster/nagios-remote ${CONTAINER_DIR}/remote
