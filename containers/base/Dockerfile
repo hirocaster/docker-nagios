@@ -44,7 +44,6 @@ EXPOSE 80
 
 COPY run_apache.sh /tmp/run_apache.sh
 COPY run_nagios.sh /tmp/run_nagios.sh
-COPY run_nsca.sh /tmp/run_nsca.sh
 
 ENTRYPOINT [ \
   "prehook", \
@@ -55,6 +54,5 @@ ENTRYPOINT [ \
     "--", \
   "codep", \
     "/tmp/run_apache.sh", \
-    "/tmp/run_nagios.sh", \
-    "/tmp/run_nsca.sh" \
+    "/tmp/run_nagios.sh" \
 ]
